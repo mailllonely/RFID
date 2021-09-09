@@ -6,7 +6,7 @@ using namespace Rcpp;
 
 // log_likelihood_Y
 double log_likelihood_Y(NumericMatrix Y, NumericMatrix PhiTheta, NumericVector alpha, NumericVector p, double lambda);
-RcppExport SEXP _BayCount_log_likelihood_Y(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
+RcppExport SEXP _RFID_log_likelihood_Y(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,7 +21,7 @@ END_RCPP
 }
 
 double log_likelihood_Y_purity(NumericMatrix Y, NumericMatrix PhiTheta, NumericVector alpha, NumericVector p, double lambda);
-RcppExport SEXP _BayCount_log_likelihood_Y_purity(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
+RcppExport SEXP _RFID_log_likelihood_Y_purity(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
     BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -38,7 +38,7 @@ RcppExport SEXP _BayCount_log_likelihood_Y_purity(SEXP YSEXP, SEXP PhiThetaSEXP,
 
 // likelihood_mat
 NumericMatrix likelihood_mat(NumericMatrix Y, NumericMatrix PhiTheta, NumericVector alpha, NumericVector p, double lambda);
-RcppExport SEXP _BayCount_likelihood_mat(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
+RcppExport SEXP _RFID_likelihood_mat(SEXP YSEXP, SEXP PhiThetaSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP lambdaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -53,7 +53,7 @@ END_RCPP
 }
 // log_likelihood_alpha
 double log_likelihood_alpha(NumericVector alpha, double g0, double h0);
-RcppExport SEXP _BayCount_log_likelihood_alpha(SEXP alphaSEXP, SEXP g0SEXP, SEXP h0SEXP) {
+RcppExport SEXP _RFID_log_likelihood_alpha(SEXP alphaSEXP, SEXP g0SEXP, SEXP h0SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -66,7 +66,7 @@ END_RCPP
 }
 // log_likelihood_Phi
 double log_likelihood_Phi(NumericMatrix Phi, double eta);
-RcppExport SEXP _BayCount_log_likelihood_Phi(SEXP PhiSEXP, SEXP etaSEXP) {
+RcppExport SEXP _RFID_log_likelihood_Phi(SEXP PhiSEXP, SEXP etaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -78,7 +78,7 @@ END_RCPP
 }
 // log_likelihood_Theta
 double log_likelihood_Theta(NumericMatrix Theta, NumericVector r, NumericVector c);
-RcppExport SEXP _BayCount_log_likelihood_Theta(SEXP ThetaSEXP, SEXP rSEXP, SEXP cSEXP) {
+RcppExport SEXP _RFID_log_likelihood_Theta(SEXP ThetaSEXP, SEXP rSEXP, SEXP cSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -91,7 +91,7 @@ END_RCPP
 }
 // rmultinomial
 Rcpp::IntegerVector rmultinomial(int N, Rcpp::NumericVector probs);
-RcppExport SEXP _BayCount_rmultinomial(SEXP NSEXP, SEXP probsSEXP) {
+RcppExport SEXP _RFID_rmultinomial(SEXP NSEXP, SEXP probsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -103,7 +103,7 @@ END_RCPP
 }
 // update_ell
 arma::cube update_ell(Rcpp::NumericMatrix Phi, Rcpp::NumericMatrix Theta, Rcpp::IntegerMatrix ELL);
-RcppExport SEXP _BayCount_update_ell(SEXP PhiSEXP, SEXP ThetaSEXP, SEXP ELLSEXP) {
+RcppExport SEXP _RFID_update_ell(SEXP PhiSEXP, SEXP ThetaSEXP, SEXP ELLSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -116,7 +116,7 @@ END_RCPP
 }
 // rand_normal
 double rand_normal(double mean, double stddev);
-RcppExport SEXP _BayCount_rand_normal(SEXP meanSEXP, SEXP stddevSEXP) {
+RcppExport SEXP _RFID_rand_normal(SEXP meanSEXP, SEXP stddevSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -128,7 +128,7 @@ END_RCPP
 }
 // CrtRng
 int CrtRng(int n, double r);
-RcppExport SEXP _BayCount_CrtRng(SEXP nSEXP, SEXP rSEXP) {
+RcppExport SEXP _RFID_CrtRng(SEXP nSEXP, SEXP rSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -140,7 +140,7 @@ END_RCPP
 }
 // update_ELL
 NumericMatrix update_ELL(NumericMatrix PhiTheta, IntegerMatrix x);
-RcppExport SEXP _BayCount_update_ELL(SEXP PhiThetaSEXP, SEXP xSEXP) {
+RcppExport SEXP _RFID_update_ELL(SEXP PhiThetaSEXP, SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -152,7 +152,7 @@ END_RCPP
 }
 // update_z
 IntegerMatrix update_z(NumericVector alpha, NumericMatrix PhiTheta, IntegerMatrix Y);
-RcppExport SEXP _BayCount_update_z(SEXP alphaSEXP, SEXP PhiThetaSEXP, SEXP YSEXP) {
+RcppExport SEXP _RFID_update_z(SEXP alphaSEXP, SEXP PhiThetaSEXP, SEXP YSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -166,7 +166,7 @@ END_RCPP
 
 // update_z_purity
 IntegerMatrix update_z_purity(NumericVector alpha, NumericMatrix PhiTheta, IntegerMatrix Y,double purity);
-RcppExport SEXP _BayCount_update_z(SEXP alphaSEXP, SEXP PhiThetaSEXP, SEXP YSEXP,SEXP puritySEXP) {
+RcppExport SEXP _RFID_update_z(SEXP alphaSEXP, SEXP PhiThetaSEXP, SEXP YSEXP,SEXP puritySEXP) {
     BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -183,7 +183,7 @@ RcppExport SEXP _BayCount_update_z(SEXP alphaSEXP, SEXP PhiThetaSEXP, SEXP YSEXP
 
 // update_m
 IntegerMatrix update_m(NumericVector alpha, IntegerMatrix z, double lambda);
-RcppExport SEXP _BayCount_update_m(SEXP alphaSEXP, SEXP zSEXP, SEXP lambdaSEXP) {
+RcppExport SEXP _RFID_update_m(SEXP alphaSEXP, SEXP zSEXP, SEXP lambdaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -196,7 +196,7 @@ END_RCPP
 }
 // update_alpha
 NumericVector update_alpha(double g0, double h0, NumericMatrix m, NumericVector p);
-RcppExport SEXP _BayCount_update_alpha(SEXP g0SEXP, SEXP h0SEXP, SEXP mSEXP, SEXP pSEXP) {
+RcppExport SEXP _RFID_update_alpha(SEXP g0SEXP, SEXP h0SEXP, SEXP mSEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -210,7 +210,7 @@ END_RCPP
 }
 // update_Phi
 NumericMatrix update_Phi(double eta, NumericMatrix ell_ik, NumericMatrix Theta, NumericVector p);
-RcppExport SEXP _BayCount_update_Phi(SEXP etaSEXP, SEXP ell_ikSEXP, SEXP ThetaSEXP, SEXP pSEXP) {
+RcppExport SEXP _RFID_update_Phi(SEXP etaSEXP, SEXP ell_ikSEXP, SEXP ThetaSEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -224,7 +224,7 @@ END_RCPP
 }
 // update_Theta
 NumericMatrix update_Theta(NumericVector r, NumericVector c, NumericVector p, NumericMatrix ell_jk, NumericMatrix Phi);
-RcppExport SEXP _BayCount_update_Theta(SEXP rSEXP, SEXP cSEXP, SEXP pSEXP, SEXP ell_jkSEXP, SEXP PhiSEXP) {
+RcppExport SEXP _RFID_update_Theta(SEXP rSEXP, SEXP cSEXP, SEXP pSEXP, SEXP ell_jkSEXP, SEXP PhiSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -239,7 +239,7 @@ END_RCPP
 }
 // update_p
 NumericVector update_p(double a0, double b0, NumericVector n, NumericMatrix Theta, NumericVector alpha);
-RcppExport SEXP _BayCount_update_p(SEXP a0SEXP, SEXP b0SEXP, SEXP nSEXP, SEXP ThetaSEXP) {
+RcppExport SEXP _RFID_update_p(SEXP a0SEXP, SEXP b0SEXP, SEXP nSEXP, SEXP ThetaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -255,7 +255,7 @@ END_RCPP
 
 // update_p_purity
 NumericVector update_p_purity(double a0, double b0, NumericVector n, NumericMatrix Theta, NumericVector alpha);
-RcppExport SEXP _BayCount_update_p(SEXP a0SEXP, SEXP b0SEXP, SEXP nSEXP, SEXP ThetaSEXP) {
+RcppExport SEXP _RFID_update_p(SEXP a0SEXP, SEXP b0SEXP, SEXP nSEXP, SEXP ThetaSEXP) {
     BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -271,7 +271,7 @@ RcppExport SEXP _BayCount_update_p(SEXP a0SEXP, SEXP b0SEXP, SEXP nSEXP, SEXP Th
 
 // update_c
 NumericVector update_c(double e0, double f0, NumericVector r, NumericMatrix Theta);
-RcppExport SEXP _BayCount_update_c(SEXP e0SEXP, SEXP f0SEXP, SEXP rSEXP, SEXP ThetaSEXP) {
+RcppExport SEXP _RFID_update_c(SEXP e0SEXP, SEXP f0SEXP, SEXP rSEXP, SEXP ThetaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -285,7 +285,7 @@ END_RCPP
 }
 // update_gamma0
 double update_gamma0(double a0, double b0, double p_tilde, double gamma0, NumericVector ell_k);
-RcppExport SEXP _BayCount_update_gamma0(SEXP a0SEXP, SEXP b0SEXP, SEXP p_tildeSEXP, SEXP gamma0SEXP, SEXP ell_kSEXP) {
+RcppExport SEXP _RFID_update_gamma0(SEXP a0SEXP, SEXP b0SEXP, SEXP p_tildeSEXP, SEXP gamma0SEXP, SEXP ell_kSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -300,7 +300,7 @@ END_RCPP
 }
 // update_c0
 double update_c0(double e0, double f0, double gamma0, NumericVector r);
-RcppExport SEXP _BayCount_update_c0(SEXP e0SEXP, SEXP f0SEXP, SEXP gamma0SEXP, SEXP rSEXP) {
+RcppExport SEXP _RFID_update_c0(SEXP e0SEXP, SEXP f0SEXP, SEXP gamma0SEXP, SEXP rSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -314,7 +314,7 @@ END_RCPP
 }
 // update_ell_tilde
 NumericMatrix update_ell_tilde(NumericMatrix ell_jk, NumericVector r);
-RcppExport SEXP _BayCount_update_ell_tilde(SEXP ell_jkSEXP, SEXP rSEXP) {
+RcppExport SEXP _RFID_update_ell_tilde(SEXP ell_jkSEXP, SEXP rSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -326,7 +326,7 @@ END_RCPP
 }
 // update_r
 NumericVector update_r(double c0, double gamma0, NumericVector p_tilde_j, NumericVector ell_tilde_k);
-RcppExport SEXP _BayCount_update_r(SEXP c0SEXP, SEXP gamma0SEXP, SEXP p_tilde_jSEXP, SEXP ell_tilde_kSEXP) {
+RcppExport SEXP _RFID_update_r(SEXP c0SEXP, SEXP gamma0SEXP, SEXP p_tilde_jSEXP, SEXP ell_tilde_kSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -340,31 +340,31 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_BayCount_log_likelihood_Y", (DL_FUNC) &_BayCount_log_likelihood_Y, 5},
-    {"_BayCount_likelihood_mat", (DL_FUNC) &_BayCount_likelihood_mat, 5},
-    {"_BayCount_log_likelihood_alpha", (DL_FUNC) &_BayCount_log_likelihood_alpha, 3},
-    {"_BayCount_log_likelihood_Phi", (DL_FUNC) &_BayCount_log_likelihood_Phi, 2},
-    {"_BayCount_log_likelihood_Theta", (DL_FUNC) &_BayCount_log_likelihood_Theta, 3},
-    {"_BayCount_rmultinomial", (DL_FUNC) &_BayCount_rmultinomial, 2},
-    {"_BayCount_update_ell", (DL_FUNC) &_BayCount_update_ell, 3},
-    {"_BayCount_rand_normal", (DL_FUNC) &_BayCount_rand_normal, 2},
-    {"_BayCount_CrtRng", (DL_FUNC) &_BayCount_CrtRng, 2},
-    {"_BayCount_update_ELL", (DL_FUNC) &_BayCount_update_ELL, 2},
-    {"_BayCount_update_z", (DL_FUNC) &_BayCount_update_z, 3},
-    {"_BayCount_update_m", (DL_FUNC) &_BayCount_update_m, 3},
-    {"_BayCount_update_alpha", (DL_FUNC) &_BayCount_update_alpha, 4},
-    {"_BayCount_update_Phi", (DL_FUNC) &_BayCount_update_Phi, 4},
-    {"_BayCount_update_Theta", (DL_FUNC) &_BayCount_update_Theta, 5},
-    {"_BayCount_update_p", (DL_FUNC) &_BayCount_update_p, 5},
-    {"_BayCount_update_c", (DL_FUNC) &_BayCount_update_c, 4},
-    {"_BayCount_update_gamma0", (DL_FUNC) &_BayCount_update_gamma0, 5},
-    {"_BayCount_update_c0", (DL_FUNC) &_BayCount_update_c0, 4},
-    {"_BayCount_update_ell_tilde", (DL_FUNC) &_BayCount_update_ell_tilde, 2},
-    {"_BayCount_update_r", (DL_FUNC) &_BayCount_update_r, 4},
+    {"_RFID_log_likelihood_Y", (DL_FUNC) &_RFID_log_likelihood_Y, 5},
+    {"_RFID_likelihood_mat", (DL_FUNC) &_RFID_likelihood_mat, 5},
+    {"_RFID_log_likelihood_alpha", (DL_FUNC) &_RFID_log_likelihood_alpha, 3},
+    {"_RFID_log_likelihood_Phi", (DL_FUNC) &_RFID_log_likelihood_Phi, 2},
+    {"_RFID_log_likelihood_Theta", (DL_FUNC) &_RFID_log_likelihood_Theta, 3},
+    {"_RFID_rmultinomial", (DL_FUNC) &_RFID_rmultinomial, 2},
+    {"_RFID_update_ell", (DL_FUNC) &_RFID_update_ell, 3},
+    {"_RFID_rand_normal", (DL_FUNC) &_RFID_rand_normal, 2},
+    {"_RFID_CrtRng", (DL_FUNC) &_RFID_CrtRng, 2},
+    {"_RFID_update_ELL", (DL_FUNC) &_RFID_update_ELL, 2},
+    {"_RFID_update_z", (DL_FUNC) &_RFID_update_z, 3},
+    {"_RFID_update_m", (DL_FUNC) &_RFID_update_m, 3},
+    {"_RFID_update_alpha", (DL_FUNC) &_RFID_update_alpha, 4},
+    {"_RFID_update_Phi", (DL_FUNC) &_RFID_update_Phi, 4},
+    {"_RFID_update_Theta", (DL_FUNC) &_RFID_update_Theta, 5},
+    {"_RFID_update_p", (DL_FUNC) &_RFID_update_p, 5},
+    {"_RFID_update_c", (DL_FUNC) &_RFID_update_c, 4},
+    {"_RFID_update_gamma0", (DL_FUNC) &_RFID_update_gamma0, 5},
+    {"_RFID_update_c0", (DL_FUNC) &_RFID_update_c0, 4},
+    {"_RFID_update_ell_tilde", (DL_FUNC) &_RFID_update_ell_tilde, 2},
+    {"_RFID_update_r", (DL_FUNC) &_RFID_update_r, 4},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_BayCount(DllInfo *dll) {
+RcppExport void R_init_RFID(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
