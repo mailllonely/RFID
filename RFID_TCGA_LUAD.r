@@ -1,6 +1,4 @@
-/Users/jli19/Documents/G2P_Project/Cell_Type_Decomposition/NBF_analysis/BayCount_1
 
-##preprocess
 
 library(R.utils)
 sourceDirectory("./")
